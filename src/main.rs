@@ -403,6 +403,7 @@ const LYRICS: &[Lyric] = &[
     }),
 ];
 
+// https://blog.kazitor.com/2014/12/portal-ascii/ - awesome work, thats some serious effort
 const ASCII_ART: &[&[&'static str]] = &[
 &[
 "              .,-:;//;:=,",
@@ -625,6 +626,7 @@ const ASCII_ART: &[&[&'static str]] = &[
 ]
 ];
 
+// got this, and the velocity from https://github.com/SDSkyKlouD/still-alive-web/
 const CREDITS: &[&'static str] = &[
     ">LIST PERSONNEL",
 	"",
@@ -865,13 +867,18 @@ const CREDITS: &[&'static str] = &[
 	""
 ];
 
-const CREDIT_CHARACTER_VELOCITY_MS: f64 = 68.623562; // no seriously. this is apparently what it is in the game code.
+const CREDIT_CHARACTER_VELOCITY_MS: f64 = 68.623562; // no seriously. this is apparently what it is in the game's source code.
 
 fn main() -> anyhow::Result<()> {
     let stdout = io::stdout();
     execute!(stdout, EnterAlternateScreen)?;
+    // gamma correction on my mac, and anti-aliasing + hinting + sub-pixel rendering meant i couldnt get the perfect colour for this. itll have to do
     execute!(stdout, SetForegroundColor(Color::Rgb { r: 215, g: 172, b: 60 }))?;
     execute!(stdout, SetCursorStyle::BlinkingUnderScore)?;
+
+    // and now.... a jungle of commented out old code;
+    // a horrible habit of mine
+
     //execute!(stdout, cursor::Show)?;
     println!("Hello, world!");
 
