@@ -1,4 +1,4 @@
-i more or less finished this in 1 day! what a triumph!! _(get it? get it?)_
+i more or less finished this in 1 day! what a triumph!! _(get it? get it?)_\n
 its what it says on the tin. portal's still alive, but in your terminal. i put good effort (maybe too much good effort) into making this as close to the original as possible while under the limitations of a terminal, which means a lot of time spent on premiere pro watching a recording of it frame by frame.
 speaking of which, i made the mistake of doing half of the lyrics while interpreting the premiere timecode of mins:secs:frames as mins:secs:millis (to the nearest 10), which i meant i had to redo ALL of it
 and of course, working with the terminal was hard. i saw many many ansi control codes written to the screen instead of being executed before i discovered rust has the amazing feature of locking the stdout stream between threads! (how does rust always have some awesome feature for the problem?)
