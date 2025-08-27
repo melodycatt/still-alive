@@ -1,0 +1,10 @@
+[package]
+name = "still-alive"
+version = "0.1.0"
+edition = "2024"
+default-run = "still-alive"
+
+[dependencies]
+anyhow = "1.0.99"
+crossterm = "0.29.0"
+rodio = "0.21.1"
